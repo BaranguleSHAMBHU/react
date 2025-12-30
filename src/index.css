@@ -1,0 +1,137 @@
+/* ================================
+   CSS RESET + BASE STYLES
+   ================================ */
+
+/* 1. Reset default browser styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Root variables (easy theming) */
+:root {
+  --primary-color: #646cff;
+  --secondary-color: #1a1a1a;
+  --text-color: #213547;
+  --bg-color: #ffffff;
+
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+    sans-serif;
+
+  --transition: all 0.3s ease;
+}
+
+/* 3. Body defaults */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================================
+   ELEMENT DEFAULTS
+   ================================ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+/* ================================
+   COMMON UTILITY CLASSES
+   ================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================================
+   BUTTON STYLES (OPTIONAL)
+   ================================ */
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVE HELPERS
+   ================================ */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.8rem;
+  }
+}
